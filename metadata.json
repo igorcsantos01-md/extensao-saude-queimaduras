@@ -1,0 +1,6 @@
+{
+  "name": "Portal de Extensão & Validador — Primeiros Socorros Oculares (Certificado Nº 10)",
+  "description": "Campanha Educativa Comunitária de Primeiros Socorros Oculares: Distribuição de Infográficos de Bolso sobre Traumas e Queimaduras Químicas, Simulador Interativo, Certificado Nº 10 (EMS-EXT-2026-1042) em PDF e Autenticador de Fé Pública.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

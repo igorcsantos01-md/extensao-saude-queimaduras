@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Libre Baskerville', Georgia, serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #0F172A;
+    background-color: #F8FAFC;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-serif-cert {
+    font-family: var(--font-serif);
+  }
+
+  .font-mono-code {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Editable highlight when inline edit mode is active */
+.cert-inline-editable[contenteditable="true"] {
+  outline: 1.5px dashed #1D4ED8;
+  outline-offset: 2px;
+  background-color: rgba(29, 78, 216, 0.05);
+  border-radius: 2px;
+  cursor: text;
+}
+
+.cert-inline-editable[contenteditable="true"]:focus {
+  outline: 2px solid #E11D48;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Native Vector PDF print rules */
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 0mm;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #FAF9F6 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-cert-stage {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    overflow: visible !important;
+  }
+
+  .print-cert-page-wrapper {
+    display: block !important;
+    width: 297mm !important;
+    height: 210mm !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  .print-cert-page-inner {
+    transform: scale(1) !important;
+    width: 297mm !important;
+    height: 210mm !important;
+  }
+}
